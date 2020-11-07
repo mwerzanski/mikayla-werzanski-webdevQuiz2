@@ -23,7 +23,7 @@ export default class DiceComponent extends React.Component {
         display: "inline-block",
         padding: "25px",
         border: "grey 2px solid",
-        textAlign: "center"}}>{this.state.num}
+        textAlign: "center"}}>{this.props.num}
       </div>
     );
   }

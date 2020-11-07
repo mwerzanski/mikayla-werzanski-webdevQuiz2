@@ -5,30 +5,21 @@ The last component is the Sum component.  It should accept an array of numbers a
 If the list of numbers is empty, it should show 0.
 */
 
-export default class DiceComponent extends React.Component {
+export default class SumComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state={
-      sumArr: props.sum,
-      sum: 0
+      sumArr: props.sum
     }
   }
 
-  findSum(num) {
-    this.setState= {
-      sum: 2
-    } 
-  }
-
   render() {
-    this.findSum(this.props.sum)
     return (
-      <div><h3>
-        Sum: {this.state.sum}
-      </h3>
+      <div>
+        <h3>
+          Sum: {this.props.sumArr}
+        </h3>
       </div>
     );
   }
 }
-
-

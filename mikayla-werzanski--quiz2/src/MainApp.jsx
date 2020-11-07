@@ -35,18 +35,35 @@ export default class MainApp extends React.Component {
     })
   };
 
+  randomize() {
+    let arrLength = this.state.arr.length
+    let newArrr = []
+    while (0 < arrLength) {
+      let randomNum = Math.floor(Math.random() * 6 + 1)
+      newArrr = newArrr.concat(randomNum)
+      arrLength --
+    }
+    this.setState({
+      arr: newArrr
+    })
+    let sum = 0;
+    for (let num of this.state.sumArr){
+      sum = sum + num
+    }
+  }
+
   render() {
     return (
       <div>
         <h1>Dice Roller</h1>
         <button onClick={() => this.add()}>Add</button>
         <button onClick={() => this.remove()}>Remove</button>
-        <div>
+        <div onClick={() => this.randomize()}>
           {this.state.arr.map(item => (
               <DiceComponent num={item}></DiceComponent>
           ))}
+          <div><br/><SumComponent sumArr={this.state.sum}/></div>
         </div>
-        <div><br/><SumComponent sum={this.state.sum}/></div>
       </div>
     );
   }
