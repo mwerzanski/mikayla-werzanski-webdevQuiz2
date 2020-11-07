@@ -46,10 +46,6 @@ export default class MainApp extends React.Component {
     this.setState({
       arr: newArrr
     })
-    let sum = 0;
-    for (let num of this.state.sumArr){
-      sum = sum + num
-    }
   }
 
   render() {
@@ -62,7 +58,7 @@ export default class MainApp extends React.Component {
           {this.state.arr.map(item => (
               <DiceComponent num={item}></DiceComponent>
           ))}
-          <div><br/><SumComponent sumArr={this.state.sum}/></div>
+          <div><br/><SumComponent/></div>
         </div>
       </div>
     );
