@@ -1,2 +1,1 @@
-# mikayla-werzanski-webdevQuiz2
-Quiz 2
+# Quiz 2
